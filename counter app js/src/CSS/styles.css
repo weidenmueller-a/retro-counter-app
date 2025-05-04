@@ -1,0 +1,129 @@
+
+:root {
+  /* COLORS */
+  --body-background-color: #1E90FF;
+  --counter-background-color: #FFD700;
+  --font-color: #000000;
+  --stroke-color: #ffffff;
+  --increment-btn-color: #00FF00;
+  --decrement-btn-color: #FF0000;
+  --reset-btn-color: #FFA500;
+
+  /* FONT */
+  --main-font: 'PressStart2P', cursive;
+}
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../fonts/PressStart2P-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+/* GENERALLY */
+body {
+  background-color: var(--body-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+
+.js-logo-container {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.js-logo-container__img {
+  width: 64px;
+  height: auto;
+}
+
+
+.main-title {
+  margin-bottom: 16px;
+}
+
+.main-title__text {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.counter-container {
+  background-color: var(--counter-background-color);
+  border: 2px solid var(--stroke-color);
+  box-shadow: 4px 4px 0;
+  padding: 16px;
+}
+
+
+.counter-container__display {
+  display: flex;
+  justify-content: center;
+}
+
+#counter-value {
+  font-size: 96px;
+}
+
+
+.counter-container__controls {
+  display: flex;
+  gap: 16px;
+}
+
+.counter-container__buttons {
+  width: 128px;
+  height: 48px;
+  border: 2px solid var(--stroke-color);
+  box-shadow: 4px 4px 0;
+  font-family: var(--main-font);
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.1s linear;
+}
+
+.increment-button {
+  background-color: var(--increment-btn-color);
+}
+
+.decrement-button {
+  background-color: var(--decrement-btn-color);
+}
+
+.reset-button {
+  background-color: var(--reset-btn-color);
+  text-transform: uppercase;
+}
+
+.counter-container__buttons:hover {
+  filter: brightness(120%);
+}
+
+.counter-container__buttons:active {
+  filter: brightness(90%);
+}
+
+
+
+
